@@ -13,7 +13,7 @@ docker pull seedgou/zerotier-moon
 
 ### 云安全组放开udp:9994
 
-### run
+### run X.X.X.X换成云的公网IP
 ```
 docker run --name zerotier-moon -d -p 9994:9993/udp -v ~/zerotier-moon-config:/var/lib/zerotier-one seedgou/zerotier-moon -4 X.X.X.X -p 9994
 ```
