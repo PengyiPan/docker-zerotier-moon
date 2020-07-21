@@ -1,9 +1,9 @@
 ## 20200721在ubuntu云上的部署
 ### 安装docker
 
-'''
+```
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
-'''
+```
 
 ### Pull the image
 
@@ -14,17 +14,19 @@ docker pull seedgou/zerotier-moon
 ### 云安全组放开udp:9994
 
 ### run
-'''
+```
 docker run --name zerotier-moon -d -p 9994:9993/udp -v ~/zerotier-moon-config:/var/lib/zerotier-one seedgou/zerotier-moon -4 X.X.X.X -p 9994
-'''
+```
 
 ### 查看结果
-'''
+```
 docker logs zerotier-moon
-'''
+```
 
-### 客户端orbit大概的方式
+### 客户端orbit大概的方式, 1234567890换成上一步出来的结果
+```
 zerotier-cli orbit 1234567890 1234567890
+```
 
 
 # docker-zerotier-moon
